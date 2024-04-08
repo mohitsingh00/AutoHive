@@ -1,9 +1,10 @@
 package com.controller;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.model.Admin;
 import com.model.Client;
 import com.model.Database;
 import com.model.Operation;
@@ -45,6 +46,19 @@ public class AddNewAccount implements Operation {
 		 
 		try
 		{
+			ArrayList<String> emails = new ArrayList<>();
+			ResultSet rs0 = database.getStatement().executeQuery("SELECT `Email` FROM `users`;");
+			while(rs0.next())
+			{
+				emails.add(rs0.getString("Email"));
+			}
+			
+			if(emails.contains(email))
+			{
+				System.out.println("This email is already used!");
+				return;
+			}
+			
 			String insert = "INSERT INTO `users`(`FirstName`,`LastName`,`Email`,`PhoneNumber`,`Password`,`Type`)"
 					+ "VALUES('"+firstName+"','"+lastName+"','"+email+"','"+phoneNumber+"','"+password+"','"+accType+"');";
 			

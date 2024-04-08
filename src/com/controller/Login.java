@@ -42,26 +42,29 @@ public class Login {
 				String phoneNumber = rs.getString("PhoneNumber");
 				String pass = rs.getString("Password");
 				int type = rs.getInt("Type");
-				switch(type)
-				{
-				case 0:
-					user = new Client();
-					break;
-				case 1:
-					user = new Admin();
-					break;
-				default:
-					user = new Client();
-					break;
-				}
-				user.setID(ID);
-				user.setFirstName(firstName);
-				user.setLastName(lastName);
-				user.setEmail(em);
-				user.setPhoneNum(phoneNumber);
-				user.setPassword(pass);
-				users.add(user);
 				
+				if(type == 0)
+				{
+					user = new Client();
+					user.setID(ID);
+					user.setFirstName(firstName);
+					user.setLastName(lastName);
+					user.setEmail(em);
+					user.setPhoneNum(phoneNumber);
+					user.setPassword(pass);
+					users.add(user);
+				}
+				else if(type == 1)
+				{
+					user = new Admin();
+					user.setID(ID);
+					user.setFirstName(firstName);
+					user.setLastName(lastName);
+					user.setEmail(em);
+					user.setPhoneNum(phoneNumber);
+					user.setPassword(pass);
+					users.add(user);
+				}
 			}
 		}
 		catch (Exception e)
