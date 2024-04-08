@@ -69,14 +69,20 @@ public class Login {
 			e.printStackTrace();
 		}
 		
+		boolean loogedIn = false;
 		for(User u : users)
 		{
 			if(u.getEmail().equals(email) && u.getPassword().equals(password))
 			{
 				System.out.println("Welcome "+u.getFirstName()+"!");
+				loogedIn = true;
 				u.showList(database, sc);
 			}
 		}
-		
+		if(!loogedIn)
+		{
+			System.out.println("Invalid Email or Password");
+			sc.close();
+		}
 	}
 }
