@@ -23,6 +23,7 @@ public class Admin extends User {
 		System.out.println("4. Delete Car");
 		System.out.println("5. Add New Admin");
 	//	System.out.println("6. Show Rents");
+	//	System.out.println("6. Show User's Rents");
 		System.out.println("7. Quit\n");
 		
 		int i = sc.nextInt();

@@ -2,11 +2,12 @@ package com.model;
 
 import java.util.Scanner;
 
+import com.controller.RentCar;
 import com.controller.ViewCars;
 
 public class Client extends User {
 
-	private Operation[] operations = new Operation[] {new ViewCars()};
+	private Operation[] operations = new Operation[] {new ViewCars(), new RentCar()};
 	public Client() {
 		super();
 	}
@@ -20,6 +21,10 @@ public class Client extends User {
 		System.out.println("4. Show My Rents");
 		System.out.println("5. Edit My Data");
 		System.out.println("6. Quit\n");
+		
+		int i = sc.nextInt();
+		operations[i-1].operation(database, sc, this);
+		showList(database, sc);
 		
 	}
 	
