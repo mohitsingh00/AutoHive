@@ -3,7 +3,6 @@ package com.controller;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import com.model.Admin;
 import com.model.Client;
 import com.model.Database;

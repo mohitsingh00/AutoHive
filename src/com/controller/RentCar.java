@@ -50,17 +50,14 @@ public class RentCar implements Operation {
 			Rent rent = new Rent();
 			
 			String insert = "INSERT INTO `rents`(`User`,`Car`,`DateTime`,`Hours`,`Total`,`Status`) VALUES"
-					+ " ('"+user.getID()+"','"+car.getID()+"', '"+rent.getDateTime()+"', '"+hours+"', '"+total+"', '0'";
+					+ " ('"+user.getID()+"','"+car.getID()+"', '"+rent.getDateTime()+"', '"+hours+"', '"+total+"', '0')";
 			
 			database.getStatement().execute(insert);
+			System.out.println("Car Rented Successfully");
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		
-		
-		
 	}
-
 }
