@@ -11,8 +11,11 @@ public class Rent {
 	private LocalDateTime dateTime;
 	private int hours;
 	private double total;
-	private String status;
+	private int status;
 	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-dd-MM hh:mm");
+	
+	//Status 0 -> running
+	//       1 -> returned
 	
 	public Rent() {
 		super();
@@ -66,11 +69,11 @@ public class Rent {
 		this.total = total;
 	}
 
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 

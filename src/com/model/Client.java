@@ -2,8 +2,11 @@ package com.model;
 
 import java.util.Scanner;
 
+import com.controller.ViewCars;
+
 public class Client extends User {
 
+	private Operation[] operations = new Operation[] {new ViewCars()};
 	public Client() {
 		super();
 	}
