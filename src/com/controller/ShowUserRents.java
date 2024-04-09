@@ -43,7 +43,7 @@ public class ShowUserRents implements Operation {
 			ResultSet rs2 = database.getStatement().executeQuery(selectUser);
 			rs2.next();
 			User u = new Client();
-			u.setID(rs.getInt("ID"));
+			u.setID(rs2.getInt("ID"));
 			u.setFirstName(rs2.getString("FirstName"));
 			u.setLastName(rs2.getString("LastName"));
 			u.setEmail(rs2.getString("Email"));
@@ -63,7 +63,7 @@ public class ShowUserRents implements Operation {
 				car.setModel(rs3.getString("Model"));
 				car.setColor(rs3.getString("Color"));
 				car.setYear(rs3.getInt("Year"));
-				car.setPrice(rs3.getDouble("Price"));
+				car.setPrice(rs3.getInt("Price"));
 				car.setAvailable(rs3.getInt("Available"));
 				r.setCar(car);
 				
@@ -79,10 +79,12 @@ public class ShowUserRents implements Operation {
 				System.out.println("Status: "+r.getStatusToString());
 				System.out.println("--------------------------------------");
 			}
+			
 		}
 		catch (Exception e) 
 		{
 			e.printStackTrace();
 		}
 	}
+
 }
