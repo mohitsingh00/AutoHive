@@ -1,6 +1,5 @@
 package com.controller;
 
-import java.lang.management.OperatingSystemMXBean;
 import java.util.Scanner;
 
 import com.model.Database;
