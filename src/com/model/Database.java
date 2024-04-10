@@ -12,7 +12,6 @@ public class Database {
 	private String url = "jdbc:mysql://localhost:3306/carrentalsystem";
 	private Statement statement;
 	
-	
 	public Database()
 	{
 		try

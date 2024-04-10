@@ -9,7 +9,7 @@ public class Rent {
 	private int ID;
 	private User user;
 	private Car car;
-	private LocalDateTime dateTime = LocalDateTime.now();
+	private LocalDateTime dateTime;
 	private int hours;
 	private double total;
 	private int status;
@@ -19,15 +19,15 @@ public class Rent {
 	//       1 -> returned
 	
 	public Rent() {
-		super();
+		dateTime = LocalDateTime.now();
 	}
 
 	public int getID() {
 		return ID;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public void setID(int ID) {
+		this.ID = ID;
 	}
 
 	public User getUser() {

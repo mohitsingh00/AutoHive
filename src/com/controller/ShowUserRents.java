@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.model.Car;
 import com.model.Client;
 import com.model.Database;
-import com.model.Operation;
+import com.model.Operation;	
 import com.model.Rent;
 import com.model.User;
 
@@ -49,6 +49,7 @@ public class ShowUserRents implements Operation {
 			u.setEmail(rs2.getString("Email"));
 			u.setPhoneNum(rs2.getString("PhoneNumber"));
 			u.setPassword(rs2.getString("Password"));
+			
 			for(int j = 0; j < rents.size(); j++)
 			{
 				Rent r = rents.get(j);
