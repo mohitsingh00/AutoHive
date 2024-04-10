@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.controller.ChangePassword;
 import com.controller.EditUserData;
+import com.controller.Quit;
 import com.controller.RentCar;
 import com.controller.ReturnCar;
 import com.controller.ShowUserRents;
@@ -12,7 +13,7 @@ import com.controller.ViewCars;
 public class Client extends User {
 
 	private Operation[] operations = new Operation[] {new ViewCars(), new RentCar(), 
-			new ReturnCar(), new ShowUserRents(2), new EditUserData(), new ChangePassword()};
+			new ReturnCar(), new ShowUserRents(2), new EditUserData(), new ChangePassword(), new Quit()};
 	public Client() {
 		super();
 	}
@@ -29,6 +30,11 @@ public class Client extends User {
 		System.out.println("7. Quit\n");
 		
 		int i = sc.nextInt();
+		if(i<1 || i<7)
+		{
+			showList(database, sc);
+			return;
+		}
 		operations[i-1].operation(database, sc, this);
 		showList(database, sc);
 	}
