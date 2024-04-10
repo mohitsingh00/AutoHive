@@ -21,6 +21,7 @@ public class ShowUserRents implements Operation {
 	@Override
 	public void operation(Database database, Scanner sc, User user) 
 	{
+		if(userID == 2) userID = user.getID();
 		ArrayList<Rent> rents = new ArrayList<>();
 		ArrayList<Integer> carIDs = new ArrayList<>();
 		try

@@ -8,7 +8,8 @@ import com.controller.ViewCars;
 
 public class Client extends User {
 
-	private Operation[] operations = new Operation[] {new ViewCars(), new RentCar(), new ShowUserRents(super.getID())};
+	private Operation[] operations = new Operation[] {new ViewCars(), new RentCar(), 
+			new ReturnCar(), new ShowUserRents(2)};
 	public Client() {
 		super();
 	}
@@ -18,8 +19,8 @@ public class Client extends User {
 	{
 		System.out.println("\n1. View Cars");
 		System.out.println("2. Rent Car");
-	//	System.out.println("3. Return Car");
-		System.out.println("3. Show My Rents");
+		System.out.println("3. Return Car");
+		System.out.println("4. Show My Rents");
 		System.out.println("5. Edit My Data");
 		System.out.println("6. Quit\n");
 		
