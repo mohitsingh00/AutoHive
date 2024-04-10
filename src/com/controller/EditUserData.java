@@ -33,7 +33,10 @@ public class EditUserData implements Operation{
 		{
 			database.getStatement().execute(update);
 			System.out.println("Profile Updated Successfuly");
-			
+			user.setFirstName(firstName);
+			user.setLastName(lastName);
+			user.setEmail(email);
+			user.setPhoneNum(phoneNumber);
 		}
 		catch (Exception e)
 		{
