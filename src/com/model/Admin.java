@@ -23,8 +23,10 @@ public class Admin extends User {
 		System.out.println("4. Delete Car");
 		System.out.println("5. Add New Admin");
 	//	System.out.println("6. Show Rents");
-	//	System.out.println("6. Show User's Rents");
-		System.out.println("7. Quit\n");
+	//	System.out.println("7. Show User's Rents");
+		System.out.println("8. Edit My Profile");
+		System.out.println("9. Change Password");
+		System.out.println("10. Quit\n");
 		
 		int i = sc.nextInt();
 		operations[i-1].operation(database, sc, this);
