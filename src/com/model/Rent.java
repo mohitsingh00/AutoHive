@@ -96,6 +96,12 @@ public class Rent {
 		}
 		return status;
 	}
+	
+	public long getDelayedHours()
+	{
+		long passedHours = ChronoUnit.HOURS.between(dateTime, LocalDateTime.now());
+		return passedHours - hours;
+	}
 
 	public void setStatus(int status) {
 		this.status = status;
