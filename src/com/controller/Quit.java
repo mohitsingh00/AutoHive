@@ -12,6 +12,7 @@ public class Quit implements Operation {
 	public void operation(Database database, Scanner sc, User user) 
 	{
 		System.out.println("Thank You for Visiting Us !");
+		sc.close();
 		
 	}
 
