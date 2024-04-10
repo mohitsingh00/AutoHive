@@ -14,7 +14,7 @@ public class Login {
 		Database database = new Database();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Welcome to Car Rental System");
+		System.out.println("WELCOME TO CAR RENTAL SYSTEM");
 		System.out.println("Enter Email: \n(-1) to create new account");
 		String email = sc.next();
 		if(email.equals("-1"))
