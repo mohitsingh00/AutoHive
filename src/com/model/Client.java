@@ -29,10 +29,13 @@ public class Client extends User {
 		System.out.println("6. Change Password");
 		System.out.println("7. Quit\n");
 		
-		int i = sc.nextInt();
+		int i = sc.nextInt(); 
 		if(i<1 || i>7)
 		{
+			System.out.println("Your Choose Invalid Option");
+			System.out.println("Please, select the correct Option");
 			showList(database, sc);
+			
 			return;
 		}
 		

@@ -36,8 +36,6 @@ public class ShowAllRents implements Operation {
 				rents.add(rent);
 			}
 			
-			
-			
 			for(int j = 0; j < rents.size(); j++)
 			{
 				Rent r = rents.get(j);
@@ -86,7 +84,5 @@ public class ShowAllRents implements Operation {
 		{
 			e.printStackTrace();
 		}
-		
 	}
-
 }
