@@ -1,6 +1,8 @@
 package com.model;
 
 import java.util.Scanner;
+
+import com.controller.ChangePassword;
 import com.controller.EditUserData;
 import com.controller.RentCar;
 import com.controller.ReturnCar;
@@ -10,7 +12,7 @@ import com.controller.ViewCars;
 public class Client extends User {
 
 	private Operation[] operations = new Operation[] {new ViewCars(), new RentCar(), 
-			new ReturnCar(), new ShowUserRents(2), new EditUserData()};
+			new ReturnCar(), new ShowUserRents(2), new EditUserData(), new ChangePassword()};
 	public Client() {
 		super();
 	}
